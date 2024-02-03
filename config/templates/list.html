@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Catálogo de Productos</h1>
+<style>
+.table, th, td {
+  border-collapse: collapse;
+}
+</style>
+  <form>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          <input placeholder="Marca" name="marca" type="text">
+        </th>
+        <th>
+           <input placeholder="Modelo" name="modelo" type="text">
+        </th>
+        <th>
+          <button class="btn btn-primary" type="submit">Consultar</button>
+        </th>
+      </tr>
+      <tr>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Condicion</th>
+        <th>Año</th>
+        <th>Categoría</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for v in cars %}
+      <tr>
+        <td>{{ v.get_marca_display }}</td>
+        <td>{{ v.modelo }}</td>
+        <td>{{ v.condicion }}</td>
+        <td>{{ v.año }}</td>
+        <td>{{ v.categoria }}</td>
+        <td>{{ v.precio }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colespan="6"> 🫡 No se encontraron datos del vehículo</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </form>
+{% endblock %}
