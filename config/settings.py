@@ -77,11 +77,18 @@ WSGI_APPLICATION = 'config.wsgi.app'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+#hay que cambiar la base de datos para que sea funcional
 DATABASES = {
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'juan-benavides-avila_control_inventario',
+    'USER': 'juan-benavides-avila_userdjango',
+    'PASSWORD': '@Passw8rd',
+    'HOST': 'postgresql-juan-benavides-avila.alwaysdata.net',
   # 'default': {
     #    'ENGINE': 'django.db.backends.sqlite3',
     #    'NAME': BASE_DIR / 'db.sqlite3',
-    #}
+    }
 }
 
 # Password validation
