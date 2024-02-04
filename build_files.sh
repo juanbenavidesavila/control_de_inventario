@@ -1,8 +1,5 @@
 #!/bin/bash
 
-pip install -r requirements.txt
-python3.9 manage.py collectstatic --noinput
-
 # Create a virtual environment
 echo "Creating a virtual environment..."
 python3.9 -m venv venv
