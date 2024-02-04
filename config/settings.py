@@ -31,7 +31,7 @@ if SECRET_KEY is None:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 X_FRAME_OPTIONS = '*'
 
 # Application definition
@@ -72,6 +72,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.app'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
