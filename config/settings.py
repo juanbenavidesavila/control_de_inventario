@@ -83,7 +83,7 @@ DATABASES = {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'juan-benavides-avila_control_inventario',
     'USER': 'juan-benavides-avila_userdjango',
-    'PASSWORD': '@Passw8rd',
+    'PASSWORD': '@Password',
     'HOST': 'postgresql-juan-benavides-avila.alwaysdata.net',
   # 'default': {
     #    'ENGINE': 'django.db.backends.sqlite3',
