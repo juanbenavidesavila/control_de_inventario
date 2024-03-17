@@ -31,7 +31,7 @@ if SECRET_KEY is None:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ["*"]
 X_FRAME_OPTIONS = '*'
 
 # Application definition
@@ -79,17 +79,16 @@ WSGI_APPLICATION = 'config.wsgi.app'
 
 #hay que cambiar la base de datos para que sea funcional
 DATABASES = {
-  'default': {
-    'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'juan-benavides-avila_control_inventario',
-    'USER': 'juan-benavides-avila_userdjango',
-    'PASSWORD': '@Password',
-    'HOST': 'postgresql-juan-benavides-avila.alwaysdata.net',
+      'default': {
+          'ENGINE': 'django.db.backends.sqlite3',
+          'NAME': BASE_DIR / 'db.sqlite3',
+      }
+  }
+
   # 'default': {
     #    'ENGINE': 'django.db.backends.sqlite3',
     #    'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
