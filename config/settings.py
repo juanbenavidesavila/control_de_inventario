@@ -32,7 +32,7 @@ if SECRET_KEY is None:
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-X_FRAME_OPTIONS = '*'
+X_FRAME_OPTIONS = ['*']
 
 # Application definition
 
